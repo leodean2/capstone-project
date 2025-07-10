@@ -68,3 +68,71 @@ TaskFlow is a full-stack task management application built with the MERN stack (
    ```bash
    git clone https://github.com/your-username/taskflow-mern.git
    cd taskflow-mern/backend
+   ```
+2.Install dependencies:
+   ```bash
+   npm install
+  ```
+3.Create .env file:
+   ```bash
+   MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+PORT=5000
+```
+4.Start the server:
+```bash
+npm run dev
+```
+
+
+## Frontend Setup
+1.Navigate to frontend directory:
+```bash
+cd ../frontend
+```
+2.Install dependencies:
+ ```bash
+npm install
+```
+3.Create .env file:
+```bash
+REACT_APP_API_URL=http://localhost:5000/api
+REACT_APP_SOCKET_URL=http://localhost:5000
+```
+4.Start the development server:
+```bash
+npm start
+```
+## Testing
+Backend Tests:
+```bash
+cd backend
+npm test
+```
+Frontend Unit Tests:
+```bash
+cd frontend
+npm test
+```
+E2E Tests (Cypress):
+```bash
+cd frontend
+npm run cypress:open
+```
+## API Documentation
+The backend API follows RESTful principles. Full documentation available at:
+https://taskflow-api-docs.example.com
+
+Key Endpoints:
+
+- POST /api/auth/register - User registration
+
+- POST /api/auth/login - User login
+
+- GET /api/tasks - Get all tasks
+
+- POST /api/tasks - Create new task
+
+- PUT /api/tasks/:id - Update task
+
+- DELETE /api/tasks/:id - Delete task
